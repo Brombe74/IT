@@ -1,0 +1,17 @@
+bin\Debug\CodiceFiscale.exe
+bin\Debug\CodiceFiscale.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\CodiceFiscale.Properties.Resources.resources
+obj\Debug\CodiceFiscale.csproj.GenerateResource.Cache
+obj\Debug\CodiceFiscale.exe
+obj\Debug\CodiceFiscale.pdb
+obj\Debug\CodiceFiscale.Form1.resources
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\CodiceFiscale.Form1.resources
+obj\Release\CodiceFiscale.Properties.Resources.resources
+obj\Release\CodiceFiscale.csproj.GenerateResource.Cache
+bin\Release\CodiceFiscale.exe
+bin\Release\CodiceFiscale.pdb
+obj\Release\CodiceFiscale.exe
+obj\Release\CodiceFiscale.pdb
+obj\Debug\CodiceFiscale.AboutBoxForm.resources

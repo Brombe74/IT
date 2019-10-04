@@ -1,0 +1,10 @@
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/bin/Debug/CodiceFiscale.exe
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/bin/Debug/CodiceFiscale.pdb
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.csprojAssemblyReference.cache
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.AboutBoxForm.resources
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.Form1.resources
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.Properties.Resources.resources
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.csproj.GenerateResource.cache
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.csproj.CoreCompileInputs.cache
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.exe
+/home/devis/Projects/Csharp/CodiceFiscale/CodiceFiscale/obj/Debug/CodiceFiscale.pdb
