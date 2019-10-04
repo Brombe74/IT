@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>PROVA DI CANVAS</title>
+
+</head>
+
+<body style="background-color:#FCE893">
+
+<center><strong>VARI CANVAS</strong></center>
+<br>
+
+	<center><canvas id="MyCanvas" width="160" height="100" style="border:3px solid #000000"> </canvas></center>
+	<center><canvas id="BEH" width="160" height="100" style="border:3px solid #000000"> </canvas></center>
+	<center><canvas id="boh" width="160" height="100" style="border:3px solid #000000"> </canvas></center>
+	<center><canvas id="yey" width="160" height="120" style="border:1px solid #d3d3d3;"></center>
+	<center><canvas id="stroke" width="160" height="100" style="border:1px solid #d3d3d3;"></center>
+
+
+  <center>    <svg width="300" height="200">
+                    <polygon points="100,10 40,198, 190,78 10,78 160,198"
+                    style="fill:#004a50;stroke:#415100;stroke-width:6;fill-rule:evenodd;" />
+                    Sorry, your browser does not support inline SVG.
+              </svg>
+  </center>
+
+	<script>
+
+	         var c = document.getElementById("MyCanvas");
+	         var ctx = c.getContext("2d");
+
+	           ctx.moveTo(100, 0);
+	           ctx.lineTo(200, 100);
+	           ctx.stroke();
+
+	        var d = document.getElementById("BEH");
+	        var ctx = d.getContext("2d");
+	var grd = ctx.createLinearGradient(0, 0, 200, 0);
+
+	grd.addColorStop(0, "#C2C2C2");
+	grd.addColorStop(1, "#9DFF4E");
+
+
+	ctx.fillStyle = grd;
+	ctx.fillRect(10, 10, 140, 80);
+
+	var e =document.getElementById("boh");
+	var ctx= e.getContext("2d");
+	var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+
+	grd.addColorStop(0, "#9F4B36");
+	grd.addColorStop(1, "#369F6A");
+
+
+	ctx.fillStyle = grd;
+	ctx.fillRect(10, 10, 140, 80);
+
+	var c = document.getElementById("yey");
+	var ctx = c.getContext("2d");
+
+	ctx.beginPath();
+	ctx.rect(20, 20, 100, 100);
+	ctx.fillStyle = "red";
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.rect(40, 40, 100, 100);
+	ctx.fillStyle = "blue";
+	ctx.fill();
+
+	var f = document.getElementById("stroke");
+	var ctx = f.getContext("2d");
+
+	ctx.font = "20px Georgia";
+	ctx.strokeText("triste!", 10, 50);
+
+	ctx.font = "30px Verdana";
+
+	var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+	gradient.addColorStop("0", "cyan");
+	gradient.addColorStop("0.6", "orange");
+	gradient.addColorStop("1.0", "red");
+
+
+	ctx.strokeStyle = gradient;
+	ctx.strokeText("testo bello", 2, 80);
+
+
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/Estrai_dati.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="629 310">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txt_cog">
+            <property name="MemberName" />
+            <property name="WidthRequest">110</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">30</property>
+            <property name="Y">35</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lbl_cog">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Inserisci cognome</property>
+          </widget>
+          <packing>
+            <property name="X">28</property>
+            <property name="Y">15</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txt_nome">
+            <property name="MemberName" />
+            <property name="WidthRequest">110</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">150</property>
+            <property name="Y">35</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lbl_nome">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Inserisci nome</property>
+          </widget>
+          <packing>
+            <property name="X">158</property>
+            <property name="Y">15</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txt_clas">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">400</property>
+            <property name="Y">35</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lbl_clas">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Inserisci classe</property>
+          </widget>
+          <packing>
+            <property name="X">402</property>
+            <property name="Y">15</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lbl_ind">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Inserisci Indirizzo</property>
+          </widget>
+          <packing>
+            <property name="X">510</property>
+            <property name="Y">15</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txt_Ind">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">510</property>
+            <property name="Y">35</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btn_1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Salva in memoria</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtn1Clicked" />
+          </widget>
+          <packing>
+            <property name="X">60</property>
+            <property name="Y">170</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txt_num">
+            <property name="MemberName" />
+            <property name="WidthRequest">110</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">275</property>
+            <property name="Y">35</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lbl_num">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Inserisci numero</property>
+          </widget>
+          <packing>
+            <property name="X">278</property>
+            <property name="Y">15</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btn_2">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Salva su file</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtn2Clicked" />
+          </widget>
+          <packing>
+            <property name="X">60</property>
+            <property name="Y">205</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btn_3">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Stampa da file</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtn3Clicked" />
+          </widget>
+          <packing>
+            <property name="X">60</property>
+            <property name="Y">240</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Arrow" id="arrow3">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">36</property>
+            <property name="Y">245</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Arrow" id="arrow2">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">36</property>
+            <property name="Y">175</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Arrow" id="arrow1">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">36</property>
+            <property name="Y">210</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txt_file">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">255</property>
+            <property name="Y">100</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lbl_file">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Inserisci il nome del file</property>
+          </widget>
+          <packing>
+            <property name="X">260</property>
+            <property name="Y">77</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="tree_contain">
+            <property name="MemberName" />
+            <property name="WidthRequest">380</property>
+            <property name="HeightRequest">125</property>
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TreeView" id="tree_view">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="X">220</property>
+            <property name="Y">155</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

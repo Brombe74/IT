@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  var a,b,c,delta;
+  var risultato1=0
+  var risultato2=0;
+
+    function somma()
+    {
+      a=document.getElementById("valore1").value;
+      a=eval(a);
+
+      b=document.getElementById("valore2").value;
+      b=eval(b);
+
+      c=document.getElementById("valore3").value;
+      c=eval(c);
+
+      delta=Math.pow(b,2)-(4*a*c);
+
+      if(delta<0)
+      {
+        document.getElementsById('risultato1').innerHTML="IMPOSSIBILE CALCOLARE IL DELTA";
+        document.getElementsById('risultato2').innerHTML="";
+      }
+
+      if (delta==0)
+      {
+        risultato1=(((-1)*b)+Math.sqrt(delta))/(2*a);
+        document.getElementById("risultato1").value=risultato1.toFixed(0);
+      }
+
+      else if (delta>0)
+      {
+        risultato1=(((-1)*b)+Math.sqrt(delta))/(2*a);
+        risultato2=(((-1)*b)-Math.sqrt(delta))/(2*a);
+
+        document.getElementById("risultato1").value=risultato1.toFixed(0);
+        document.getElementById("risultato2").value=risultato2.toFixed(0);
+      }
+
+      console.log(risultato1);
+      console.log(risultato2);
+    }
+
+
+  </script>
+<title>Equazione secondo grado</title>
+</head>
+<body style="background-color:#4C8FB1">
+<h1 style="text-align:center">Equazione di secondo grado</h1>
+
+  <div style="margin-left:20%">
+    Valore 1: <input type="text" id="valore1" value="0">
+    Valore 2: <input type="text" id="valore2" value="0">
+    Valore 3: <input type="text" id="valore3" value="0">
+  </div>
+  <br/>
+
+  <button onclick="somma()" style="margin-left:40%">Calcola</button>
+
+  <br/>
+
+<div style="margin-left:20%">
+  Risultato 1: <input type="text" id="risultato1" value="">
+  Risultato 2: <input type="text" id="risultato2" value="">
+</div>
+
+</body>
+</html>

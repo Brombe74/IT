@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="utf-8" />
+<title>Esempio funzione su canvas</title>
+<script>
+	function Assi(piano, dimX, dimY)
+	{
+		// dimX e dimY sono le dimensioni massime del canvas
+		// traccio l'asse X
+		piano.moveTo(0, dimY/2);
+		piano.lineTo(dimX, dimY/2);
+
+
+		piano.lineTo(dimX-7,(dimY/2)-7);
+		piano.lineTo(dimX-7,(dimY/2)+7);
+		piano.lineTo(dimX, dimY/2);
+
+		piano.stroke();
+
+
+		// traccio l'asse Y
+		piano.moveTo(dimX/2, 0);
+		piano.lineTo(dimX/2, dimY);
+		piano.stroke();
+		return 0;
+	}
+
+	function Ascissa(x, dimX)
+	{
+		return (dimX/2) + x;
+	}
+
+	function Ordinata(y, dimY)
+	{
+		return (dimY/2) -y;
+	}
+
+	function Funzione(x)
+	{
+	  return 20 * Math.sin(x/25);
+	  //return x + 10;
+	}
+
+</script>
+</head>
+
+<body>
+<center>  <canvas id="myCanvas" width="400" height="400"
+  style="border:1px solid #000000;"></canvas></center>
+  <script type="text/javascript">
+	  var dimX = 400;
+	  var dimY = 400;
+	  var x;
+	  var y;
+	  var c = document.getElementById("myCanvas");
+	  var ctx = c.getContext("2d");
+	  Assi(ctx, dimX, dimY);
+	  // disegno la funzione unendo con una linea f(x) ed f(x+1)
+	  for (x = -dimX/2; x < dimX/2; x++)
+	  {
+		  // calcolo il valore di y attraverso la funzione
+		  y = Funzione(x);
+		  // posiziono il cursore nel punto di partenza
+		  ctx.moveTo(Ascissa(x, dimX), Ordinata(y, dimY));
+		  // calcolo il valore di x+1
+		  y = Funzione(x + 1);
+		  // traccio la linea per unire i due punti
+		  ctx.lineTo(Ascissa(x, dimX), Ordinata(y, dimY));
+		  ctx.stroke();
+	  }
+  </script>
+
+</body>
+
+</html>
