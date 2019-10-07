@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+
+  <style media="screen">
+
+    table
+    {
+      margin: 0 auto;
+	    border-collapse: collapse;
+	    background: cyan;
+    }
+    tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd)
+    {
+	     background: white;
+    }
+
+  </style>
+	<script>
+    function Fibonacci(fib)
+    {
+      var sequenza=new Array(fib);
+
+      for(i=1;i<=fib;i++)
+      {
+        sequenza[i]=i+(i-1);
+      }
+
+      for(i=0;i<fib;i++)
+      {
+        document.write(" "+sequenza[i]);
+      }
+    }
+
+    function Pitagora(n_pit)
+    {
+      document.write("<table border=\"1\">");
+      for (riga=1; riga<n_pit+1;riga++)
+      {
+        document.write("<tr>");
+
+        for (colonna=1; colonna<n_pit+1;colonna++)
+          document.write("<td>" + riga*colonna + "</td>");
+
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    }
+
+	</script>
+</head>
+<body>
+  <h1>Output con document write</h1>
+  <h4>Inserisci il numero della sequenza di fibonacci che desideri <input type="text" id="fib" value="0"></h4>
+  <h4>Inserisci il numero della tavola pitagorica <input type="text" id="n_pit" value="0"></h4>
+  <script>
+    // inserire lo script all'interno del body nel punto in cui si
+    // vuole generare l'output
+    var nRighe= 12;
+    var nColonne= 4;
+    var fibonacci=  eval(document.getElementById("fib").value);
+    var pitagora= eval(document.getElementById("n_pit").value);
+
+    document.write('<button onclick="Fibonacci(fibonacci)">fibonacci</button>');
+    document.write('<button onclick="Pitagora(pitagora)">Pitagora</button>');
+    document.write();
+
+
+  </script>
+
+</body>
