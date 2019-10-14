@@ -1,0 +1,47 @@
+body
+{
+ background-color: #1CB4DF;
+ text-align: left;
+}
+
+.piccolo
+{
+  font-size: 0.8em;
+  color: purple;
+}
+
+.center
+{
+  text-align: center;
+  background-color: #76FFBA;
+  color: #EC5221;
+  font-style: italic;
+}
+
+.destra
+{
+ text-align: right;
+ color: darkorange;
+ text-decoration: overline;
+}
+
+#sinistra
+{
+  text-align: left;
+  background-color: #ffcc00;
+  color: grey;
+}
+
+h2
+{
+  text-align: center;
+  background-color: #89CA9B;
+  color:  #ff7733;
+}
+
+#rosso
+{
+  color: darkred;
+  background-color: red;
+  font-weight: bolder;
+}
