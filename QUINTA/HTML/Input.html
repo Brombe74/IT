@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="screen">
+
+  body
+  {
+    background-color: #1CB4DF;
+    text-align: center;
+  }
+
+  p
+  {
+    font-weight: bolder;
+    color: darkgreen;
+  }
+
+  table,tr,td
+  {
+    border: 1px solid black;
+    margin: 0 auto;
+    border-collapse: separate;
+  }
+
+
+  </style>
+
+</head>
+<body>
+
+<p>Inserimento dati per la registrazione ai corsi presso Istituto Canvas</p>
+
+<form action="">
+<table>
+  <tr>
+    <td><strong>Inserisci Nome</strong></td>
+    <td><input type="text" name="Nome" value="" required></td>
+  </tr>
+
+  <tr>
+    <td><strong>Inserisci Cognome</strong></td>
+    <td><input type="text" name="Cognome" value="" required></td>
+  </tr>
+
+  <tr>
+    <td><strong>Inserisci il numero di telefono</strong></td>
+    <td><input type="text" name="telefono" value="" required></td>
+  </tr>
+
+  <tr>
+      <td><strong>Inserisci Username</strong></td>
+      <td><input type="text" name="username" required></td>
+  </tr>
+
+  <tr>
+      <td><strong>Inserisci password</strong></td>
+      <td><input type="password" name="psw" required></td>
+  </tr>
+
+  <tr>
+    <td><strong>Scegliere il sesso</strong></td>
+    <td>
+      <input type="radio" name="" value="" required> Maschio
+      <input type="radio" name="" value="" required> Femmina
+      <input type="radio" name="" value="" required> Terzo sesso perch&egrave; viviamo in una societ&agrave;
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Scegliere corso desiderato</strong></td>
+    <td>
+      <input type="radio" name="corso" value="" required> Programmazione
+      <input type="radio" name="corso" value="" required> Animazione
+      <input type="radio" name="corso" value="" required> Web Designer
+      <input type="radio" name="corso" value="" required> Manutentore
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Scegliere i possibili orari di lezione</strong></td>
+    <td>
+      <input type="checkbox" name="orari" value=""> 8:00
+      <input type="checkbox" name="orari" value=""> 8:30
+      <input type="checkbox" name="orari" value=""> 9:00
+      <input type="checkbox" name="orari" value=""> 9:30
+      <input type="checkbox" name="orari" value=""> 10:00
+    </td>
+  </tr>
+</table>
+</form>
+
+<button onclick="location.href= 'www.e-fermi.it';" type="button" name="button">Conferma</button>
+
+</body>
+</html>
