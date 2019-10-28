@@ -1,0 +1,12 @@
+body
+{
+  background-color: #1CB4DF;
+  text-align: center;
+}
+
+table,tr,td
+{
+  border: 1px solid black;
+  margin: 0 auto;
+  border-collapse: separate;
+}
