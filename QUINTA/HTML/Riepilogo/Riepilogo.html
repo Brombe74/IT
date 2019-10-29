@@ -12,17 +12,34 @@
         var n=document.getElementById(id).value;
           if (n.length < 1)
           {
-          //  window.alert("Il "+id+" è vuoto");
-          document.getElementById("id").innerHTML = "Campo vuoto";
+          window.alert("Il "+id+" è vuoto");
             return false;
           }
           return true;
     }
 
+    function ControllaRegione(id)
+    {
+      if (document.getElementById(id)==null)
+      {
+          return false;
+      }
+
+      var n=document.getElementById(id).value;
+
+      if (n=="Nessuna")
+      {
+        window.alert("La regione è vuota");
+        return false
+      }
+
+      return true;
+    }
+
     function controllo()
     {
       console.log("PRIMA IF");
-      if (Controllaid("cgn") && Controllaid("nm") && Controllaid("mtr") && Controllaid("rgn") && Controllaid("cll") && Controllaid("ml"))
+      if (Controllaid("cognome") && Controllaid("nome") && Controllaid("matricola") && ControllaRegione("regione") && Controllaid("email") && Controllaid("cellulare"))
       {
         console.log("PRIMA DI HREF");
         location.href= 'redirect.html';
@@ -39,23 +56,23 @@
     <table>
       <tr>
         <td><strong>Cognome</strong></td>
-        <td><input type="text" name="cognome" id="cgn" maxlength="40"></td>
+        <td><input type="text" name="cognome" id="cognome" maxlength="40"></td>
       </tr>
 
       <tr>
         <td><strong>Nome</strong></td>
-        <td><input type="text" name="nome" id="nm" maxlength="30"></td>
+        <td><input type="text" name="nome" id="nome" maxlength="30"></td>
       </tr>
 
       <tr>
         <td><strong>Matricola</strong></td>
-        <td><input type="text" name="matricola" id="mtr" maxlength="12"></td>
+        <td><input type="text" name="matricola" id="matricola" maxlength="12"></td>
       </tr>
 
       <tr>
         <td><strong>Regione di appartenenza</strong></td>
         <td>
-          <select name="regione" id="rgn">
+          <select name="regione" id="regione">
             <option value="Nessuna" selected></option>
             <option value="Valle d'Aosta">Val d&#96;Aosta</option>
             <option value="Piemonte">Piemonte</option>
@@ -83,12 +100,12 @@
 
       <tr>
         <td><strong>E-mail</strong></td>
-        <td><input type="text" name="email" id="ml" maxlength="30"></td>
+        <td><input type="text" name="email" id="email" maxlength="30"></td>
       </tr>
 
       <tr>
         <td><strong>Cellulare</strong></td>
-        <td><input type="text" name="cel" id="cll" maxlength="15"></td>
+        <td><input type="text" name="cellulare" id="cellulare" maxlength="15"></td>
       </tr>
 
       <tr>
