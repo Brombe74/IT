@@ -9,13 +9,13 @@
       console.log("INIZIO "+document.getElementById(id));
       if(document.getElementById(id)==null)
         return false;
-      
+
       var n=document.getElementById(id).value;
-      
+
       if (n.length < 1)
       {
-          window.alert("Il "+id+" è vuoto");
-          return false;  
+          window.alert("Il campo "+id+" è vuoto");
+          return false;
       }
        return true;
     }
@@ -31,7 +31,7 @@
 
       if (n=="Nessuna")
       {
-        window.alert("La regione è vuota");
+        window.alert("Il campo regione è vuoto");
         return false
       }
       return true;
@@ -115,7 +115,7 @@
     </table>
         <button onclick="controllo();" type="button" name="button">Conferma</button>
         <button type="reset" name="button">Reset</button>
-      
+
     </form>
   </body>
 </html>
