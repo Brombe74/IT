@@ -9,13 +9,15 @@
       console.log("INIZIO "+document.getElementById(id));
       if(document.getElementById(id)==null)
         return false;
-        var n=document.getElementById(id).value;
-          if (n.length < 1)
-          {
+      
+      var n=document.getElementById(id).value;
+      
+      if (n.length < 1)
+      {
           window.alert("Il "+id+" è vuoto");
-            return false;  
-          }
-          return true;
+          return false;  
+      }
+       return true;
     }
 
     function ControllaRegione(id)
@@ -32,7 +34,6 @@
         window.alert("La regione è vuota");
         return false
       }
-
       return true;
     }
 
