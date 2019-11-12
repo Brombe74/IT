@@ -14,7 +14,7 @@ primary key(Matricola),
 
 create table corso
 (
-id int(10) not null primary key,
+id int(10) not null,
 Materia char(15) not null,
 Livello int(1),
 Docente char(30),
@@ -23,7 +23,7 @@ primary key(id),
 
 create table Docente
 (
-id int(10) not null primary key;
+id int(10) not null,
 Nome char(10),
 Cognome char(10),
 primary key(id),
@@ -31,7 +31,7 @@ primary key(id),
 
 create table Scuola
 (
-id int(10) not null primary key,
+id int(10) not null,
 Nome char(20) not null,
 N_studenti int(4)not null,
 N_docenti int(2) not null,
