@@ -1,0 +1,20 @@
+1) Realizzare una applicazione con Html5 e Javascript per verificare se tre numeri interi a, b, e c, inseriti dall'utente, formano una terna pitagorica tale che: a2 + b2 = c2
+
+E' consentito l'uso esclusivamente di questi manuali online:
+Html5 (https://elearning.unite.it/pluginfile.php/67455/mod_resource/content/1/guida_html5_di_base.pdf)
+Javascript (https://javascript.info/)
+Javascript (pdf) (http://pages.di.unipi.it/milazzo/teaching/AA1011-ALG/JavaScript.pdf)
+
+----------------------------------------------------------------------------------------------
+2) Sviluppare in linguaggio MySQL le query necessarie per creare le seguenti tabelle e le successive query:
+
+Autista (Codice, Cognome, Nome, Patente, codiceMezzo)
+CategoriaMezzo (Codice, Descrizione, Posti)
+
+Query richieste:
+a) Gli autisti in possesso di patente C
+b) Gli autisti in possesso di patente D1 o D1E
+c) Gli autisti che guidano autobus con almeno 20 posti
+
+Note: si veda il link alle categorie di patente per stabilire il tipo di campo più opportuno; per semplicità, ogni autista guida un solo mezzo (codiceMezzo fa riferimento al campo Codice nella tabella CategoriaMezzo). La descrizione del mezzo può essere autobus, autotreno, autocarro, autoarticolato.
+Consegnare un file con estensione sql contenente le query di creazione tabelle, selezione e popolamento.

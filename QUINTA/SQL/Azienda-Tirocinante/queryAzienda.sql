@@ -24,4 +24,4 @@ INSERT INTO 191126Tirocinante ('Matricola', 'Nome', 'Cognome', 'Classe', 'Idazie
 (3300, 'dario', 'grumetti', '1a', 10, 200),
 (4000, 'ugo', 'rosa', '1d', 2, 220),
 
-SELECT 191126Tirocinante.Nome, 191126Tirocinante.Cognome
+SELECT 191126Tirocinante.Nome, 191126Tirocinante.Cognome FROM 191126Tirocinante, 191126Azienda WHERE 191126Tirocinante
