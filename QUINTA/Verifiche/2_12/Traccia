@@ -1,4 +1,4 @@
-1) Realizzare una applicazione con Html5 e Javascript per verificare se tre numeri interi a, b, e c, inseriti dall'utente, formano una terna pitagorica tale che: a2 + b2 = c2
+1) Realizzare una applicazione con Html5 e Javascript per verificare se tre numeri interi a, b, e c, inseriti dall'utente, formano una terna pitagorica tale che: a^2 + b^2 = c^2
 
 E' consentito l'uso esclusivamente di questi manuali online:
 Html5 (https://elearning.unite.it/pluginfile.php/67455/mod_resource/content/1/guida_html5_di_base.pdf)
