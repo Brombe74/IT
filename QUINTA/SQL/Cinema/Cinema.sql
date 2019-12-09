@@ -48,10 +48,21 @@ CREATE TABLE if not exists 19123Proiezioni
 );
 
 INSERT INTO 19123Attori (CodAttore,Nome,Annonascita,Nazionalita) values
-('123',NULL,NULL,NULL);
+('13','Rosssi','1995','Italiana');
 INSERT INTO 19123Film (Codfilm,Titolo,AnnoProduzione,Regista,Genere) values
 ('987',NULL,NULL,NULL,NULL);
 INSERT INTO 19123Sale (CodSala,Posti,Nome,Citta) values
 ('111',NULL,NULL,NULL);
 INSERT INTO 19123Proiezioni (CodProiezione,Film,Sala,Incasso,DataProiezione) values
 ('555','987','111',NULL);
+
+
+SELECT * FROM 19123Film WHERE Regista='Casablanca';
+SELECT * FROM 19123Proiezioni WHERE DataProiezione='25-12-2004';
+SELECT * FROM 19123Film WHERE Attore='M. Mastroianni' AND Attore='S.Loren';
+NOT SELECT * FROM 19123Sale WHERE Citta='Pisa';
+SELECT * FROM 19123Sale WHERE Citta='Pisa';
+SELECT * FROM 19123Proiezioni WHERE Incasso<'500';
+SELECT * FROM 19123Proiezioni WHERE Incasso>'500';
+SELECT * FROM 19123Attori WHERE Nazionalita='Italiana';
+SELECT * FROM 19123Film WHERE Genere='Western' WHERE Incasso>'5000';
