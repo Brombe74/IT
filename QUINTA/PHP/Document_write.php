@@ -23,7 +23,7 @@
 
   <?php
     $fib=5;
-    $sequenza= array($fib);
+    $sequenza= array();
 
     for ($i=0; $i < $fib ; $i++)
     {
