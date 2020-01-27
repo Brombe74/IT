@@ -10,7 +10,7 @@
         <strong>Inserisci il gradiente del verde:</strong> <input type="text" name="Green"> <br>
         <strong>Inserisci il gradiente del blu:</strong> <input type="text" name="Blue"> <br>
         <br>
-        <input type="submit">
+        <input type="submit" style="margin-left:25%;padding:0">
         </form>
   </body>
 </html>
