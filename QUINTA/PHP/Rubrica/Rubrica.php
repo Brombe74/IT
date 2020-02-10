@@ -1,3 +1,7 @@
+<?php
+include("Connessione.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -21,14 +25,10 @@
       </form>
     </div>
 
-          <?php
-          if(isset($_POST["bottone"]))
-          {
-            $Name=$_POST["nome"];
-            $Surname=$_POST["cognome"];
-            $phone=$_POST["telefono"];
-          }  
-           ?>
 
   </body>
 </html>
+<?php
+if($connect)
+$connect->close();
+ ?>
