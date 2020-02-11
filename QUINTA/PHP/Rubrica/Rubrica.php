@@ -25,6 +25,24 @@ include("Connessione.php");
       </form>
     </div>
 
+    <div>
+      <h3>QUERY</h3>
+      <?php
+       if($connect)
+       {
+         $select_result=$connect->query($query_select);
+
+         if ($select_result->num_rows>0)
+         {
+          while ($row=$select_result->fetch_assoc())
+          {
+            echo $row ["cognome"];
+          }
+         }
+       }
+       ?>
+    </div>
+
 
   </body>
 </html>
