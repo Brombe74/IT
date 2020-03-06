@@ -37,7 +37,6 @@ if(isset($_POST["bottone"]))
   $payment=$_POST["dazio"];
 }
 
-
 $connect = mysqli_connect($server, $username, $password)
       or die("Connessione non riuscita: " . mysqli_error($connect));
       print ("Connesso con successo <br />");
@@ -50,9 +49,9 @@ mysqli_select_db($connect, $database)
         Nome varchar(20) NOT NULL,
         Cognome varchar(20) NOT NULL,
         Nazionalita varchar(10) NOT NULL,
-        Numero passaporto/identià char(10) NOT NULL,
-        Aeroporto di provenienza varchar(10),
-        Motivo viaggio varchar (20) NOT NULL,
+        Numero_passaporto_identià char(10) NOT NULL,
+        Aeroporto_di_provenienza varchar(10),
+        Motivo_viaggio varchar (20) NOT NULL,
         PRIMARY KEY (Numero passaporto/identià)
       );";
 
@@ -70,22 +69,27 @@ mysqli_select_db($connect, $database)
         Quantità varchar(4) NOT NULL,
         Proprietario char(10) NOT NULL,
         PRIMARY KEY (Genere,Proprietario),
-        FOREIGN KEY (Proprietario) REFERENCES Passeggero(passaporto/identià)
+        FOREIGN KEY (Proprietario) REFERENCES Passeggero(Numero_passaporto_identià)
       );";
 
       $query=NULL;
 
       $query= "CREATE TABLE IF NOT EXISTS Controllo
       (
-        punto_controllo
-        id_a
-        date_i
-        date_f
-        esito
-        dazio
+        punto_controllo varchar(10) NOT NULL,
+        id_a char(10) NOT NULL,
+        id_p char(10) NOT NULL,
+        merce varchar(10) NOT NULL,
+        date_i DateTime NOT NULL,
+        date_f DateTime NOT NULL,
+        esito varchar(10) NOT NULL
+        dazio varchar(5) NOT NULL,
+        FOREIGN KEY (merce) REFERENCES MERCE(Genere)
+        FOREIGN KEY (id_p) REFERENCES Passeggero(Numero_passaporto/identià)
+        PRIMARY KEY (id_a)
       );";
 
-      $query= "INSERT INTO `Passeggero`(`Nome`,`Cognome`,`Nazionalita`, `Numero passaporto/identià`, `Aeroporto di provenienza`, `Motivo viaggio`)
+      $query= "INSERT INTO `Passeggero`(`Nome`,`Cognome`,`Nazionalita`, `Numero passaporto_identià`, `Aeroporto di provenienza`, `Motivo viaggio`)
       VALUES('$Name','$Surname','$nation','$id_pa','$airport','$motivation');";
 
       if($connect->query($query)===TRUE)
@@ -115,8 +119,45 @@ mysqli_select_db($connect, $database)
 
       $query=NULL;
 
-      $query="SELECT * FROM Passeggero WHERE Nome='Daniel';";
-      $query_select="SELECT * FROM Passeggero ORDER BY `Cognome`;"
+      $query= "INSERT INTO `Controllo`(`punto_controllo`,`id_a`,`Numero passaporto_identià`,`merce`,`date_i`, `date_f`, `esito`, `dazio`)
+      VALUES('$control','$id_agent','$id_pa','$genre', '$start', '$finish', '$result', '$payment');";
+
+      $query=NULL;
+
+      $query_select="SELECT Controllo.id_a, Controllo.punto_controllo, SUM(Controllo.dazio) AS TotaleDazio
+      FROM Controllo
+      GROUP BY Controllo.id_a, Controllo.punto_controllo;";
+
+      $query_select=NULL;
+
+      $query_select="SELECT MERCE.genere, COUNT(*) AS Controllo.merce
+      FROM MERCE, Controllo
+      WHERE Merce.Genere=Controllo.merce
+      AND Controllo.esito= 'Positivo'
+      GROUP BY Merce.genere;";
+
+      $query_select=NULL;
+
+      $query_select="SELECT Controllo.id_a
+      FROM Controllo
+      WHERE  Controllo.esito='negativo'
+      GROUP BY Controllo.id_a;";
+
+      $query_select=NULL;
+
+      $query_select="SELECT Passeggero.id_p, Passeggero.Cognome, Passeggero.Nome,Passeggero.Nazionalita
+      WHERE Passeggero.Numero_passaporto_identià=Controllo.id_p
+      AND YEAR(Controllo.date_i)= YEAR (CURDATE())
+      AND Controllo.esito=='fermo'
+      ORDER BY Passeggero.Nazionalita, Passeggero.Cognome, Passeggero.Nome;";
+
+      $query_select=NULL;
+
+      $query_select="SELECT Controllo.id_a
+      WHERE YEAR(Controllo.date_i)= YEAR (CURDATE())
+      AND MONTH(Controllo.date_i)= MONTH (CURDATE())
+      AND DAY(Controllo.date_i)= DAY (CURDATE())
+      ORDER BY Controllo.id_a;";
 
       if($connect->query($query)===TRUE)
       {
